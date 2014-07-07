@@ -7,6 +7,9 @@ def warn(message):
 def error(message):
   print '\033[91m' + message + '\033[0m'
 
+def info(message):
+  print '\033[96m' + message + '\033[0m'
+
 # ESC [ 0 m       # reset all (colors and brightness)
 # ESC [ 1 m       # bright
 # ESC [ 2 m       # dim (looks same as normal brightness)
