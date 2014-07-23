@@ -2,7 +2,7 @@ import os, sys, time, json, pprint
 import net
 
 from boto import ec2
-from config import Config
+from aws_config import AwsConfig
 from defaults import messages
 
 class Ec2:
@@ -10,7 +10,7 @@ class Ec2:
   conn = None
 
   def __init__(self):
-    self.cfg = Config()
+    self.cfg = AwsConfig()
     self.cfg.read()
 
     self.conn = ec2.connect_to_region(self.cfg.region,
